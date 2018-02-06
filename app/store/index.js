@@ -4,6 +4,7 @@ import logger from 'redux-logger'
 
 // App Data
 import ArticlesReducer from './../dataReducers/articlesReducer';
+import userApiKeyReducer from './../dataReducers/userApiKeyReducer';
 
 // Navigation
 //import { NavigatorTabOne } from '../tabOne/navigationConfiguration'
@@ -23,6 +24,7 @@ export default createStore(
     combineReducers({
         // app data
         articles: ArticlesReducer,
+        userApiKey: userApiKeyReducer,
 
         // navigation tabs reducers
         tabBar: tabBarReducer,

@@ -12,13 +12,21 @@ import { connect } from 'react-redux'
 const mapStateToProps = (state) => {
     return {
         navigationState: state.tabBar,
+        apiKey: state.userApiKey.key,
+        art: state.articles.articles
     }
 }
 
+/**
+ * main tabbar navigation
+ */
 class TabBarNavigation extends React.Component {
 
     render(){
-        const { dispatch, navigationState } = this.props
+        const { dispatch, navigationState, apiKey} = this.props;
+
+        // if apikey is equal to -1
+
         return (
             <TabBar
                 navigation={
